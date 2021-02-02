@@ -37,11 +37,9 @@ class _movieState extends State<movie> {
 
       setState(() {
         m = qwe.toString();
+        return m;
       });
     }
-    setState(() {
-      return m;
-    });
   }
 
   @override
