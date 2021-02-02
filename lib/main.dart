@@ -1,14 +1,13 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:velocity_x/velocity_x.dart';
-
-var cmd, url, r, data, fdata, m;
-var qwe = "\n";
 
 void main() {
   runApp(movie());
 }
+
+var cmd, url, r, data, fdata, m;
+var qwe = "\n";
 
 // ignore: camel_case_types
 class movie extends StatefulWidget {
@@ -85,18 +84,16 @@ class _movieState extends State<movie> {
                     child: Text('search')),
               ),
               Expanded(
-                child: VxSwiper(
-                  scrollDirection: Axis.vertical,
-                  items: [
-                    Text(
-                      "here are your searched results \n \n$m" ??
-                          "loading...",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500),
-                    ).p16()
-                  ],
+                child: Container(
+                  padding: EdgeInsets.only(left: 5, top: 20),
+                  child: Text(
+                    "here are your searched results \n \n$m" ??
+                        "loading...",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500),
+                  ),
                 ),
               )
             ]),
